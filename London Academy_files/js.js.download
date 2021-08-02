@@ -1,0 +1,23 @@
+/*up arrow*/
+$(window).scroll(function(){
+    var scroll= $(this).scrollTop();
+
+    if(scroll>200){
+        $('.up').fadeIn();
+    }
+    else{
+        $('.up').fadeOut();
+    }
+
+});
+
+
+
+$('.up').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+
+
+
